@@ -1,48 +1,28 @@
-# v3.1 — Closed-test update QA
+# v3.3.1 delta QA
 
-PASS: exact three supplied URLs, ordered signup steps, 14-day request, same-account guidance, homepage/catalog anchor links, cross-page source checks and preserved media/ads record. Existing JavaScript is unchanged from tested v3. No Google account was used; external group membership, opt-in and installation have not been exercised. The web tool could not fetch the supplied external pages. Visual browser limitations described below remain.
+Source checked: both outdated cover references are removed from active HTML, the new shared image resolves, CSS framing has a reserved promo aspect ratio, and Chronicle sharing dimensions match the new image. Cross-page source/link checks run for this package. This is an image-presentation-only patch; shared scripts and all content/verification resources are retained. Browser visual inspection remains unverified.
 
-# Website v3 — QA report
-25 October 2026
+# Website v3.3 — Artwork update QA
+31 October 2026
 
-## Passed source checks
-- Six HTML documents: five real content pages and a consistent 404 page.
-- Proper explicit HTML tag nesting, unique IDs and one H1 per page.
-- Every relative/root-relative link, fragment, image, poster, stylesheet, script and video resolves to an included destination.
-- All five content pages have unique title, description and canonical URL; Open Graph and social metadata are present.
-- Three consistent navigation surfaces per page: desktop, mobile and footer.
-- Current-page aria-current attributes; Our Worlds parent-section marking on the Hana page.
-- Sitemap contains exactly the five canonical content URLs.
-- All ten original v2 assets compare byte-for-byte with the source ZIP.
-- Root app-ads.txt compares byte-for-byte with v2 and the exact required 58-byte record.
-- Game sharing image is 1200 × 630; all retained WebP files decode.
-- Source includes image alternative text and reserved dimensions (except the dynamic modal image).
-- Homepage excludes the full game video/story/studio/contact sections.
-- Game page contains native video controls, preload=none, no autoplay, and an explicit release-location notice.
-- No backend form, placeholder store link, invented game or public-release claim.
-- JavaScript syntax passes Node --check.
-- ZIP entry paths, root index.html, required pages and CRC integrity checked after packaging.
+## Passed checks
+- Seven structurally checked HTML documents: six content pages and 404. One H1 each; IDs are unique.
+- All local links, fragments, images, posters, scripts, stylesheets and video paths resolve.
+- Unique titles, descriptions and canonicals for all six content pages; sitemap matches the real URLs.
+- All site HTML is English-only.
+- All fifteen character biographies match v3.2 exactly. Ren and Hana use their respective CSS views of the supplied character sheet, with full-sheet links.
+- Portrait windows stay inside the original 1779 × 884 sheet and preserve its aspect ratio. Labels sit below the artwork rather than over the figures.
+- Banner-window scale math was checked for desktop/mobile container sizes. Only the source's upper 510 pixels can appear; the menu buttons are outside that window.
+- The complete new home screen is a separate, uncropped, clearly labelled image, included in the existing gallery.
+- Four gallery images have sequential indices, and the viewer heading now says Gallery. Shared JavaScript is unchanged.
+- New images decode and match their declared source dimensions. The game-page social metadata declares 1671 × 941 for the supplied full-screen image.
+- Forty-two protected previous assets/base files compare byte-for-byte with v3.2, including studio art, gameplay media, scripts, base styles, ads file and untouched pages.
+- Closed-test URLs, In Testing status, 14-day request, privacy links and collapsed ending spoilers are preserved.
+- Root app-ads.txt remains the exact required 58-byte record, without BOM or newline.
+- CSS braces balance; image sources and explicit dimensions are present. No new JS dependency, external image service, tracking or form was added.
+- ZIP CRC, root layout and required new assets checked after packaging.
 
-## Passed interaction logic checks
-Actual script.js was executed with a small mocked DOM (no browser rendering or policy workaround):
-- Direct-file directory-link adaptation.
-- Cover-image scale/offset calculation for the 1536 × 1024 retained hero.
-- Mutually exclusive future-portal expanded state and Escape dismissal.
-- Mobile Menu Escape closing and summary focus.
-- Gallery opening, previous/next wraparound, arrow navigation, closing and returned opener focus.
-These verify logic, not browser layout or native behavior.
+## Verification limit
+These are source, content, asset and geometry checks. Actual desktop/mobile browser rendering, portrait framing, text/image overlap and the four-image viewer have not been exercised in-browser. The previously attempted local preview route is unavailable in this environment; no unchanged failed preview attempt or alternate browser-control route was used. The README identifies the local review steps. No visual certification or performance score is claimed.
 
-## Source review
-- Midnight/gold v2 styling retained with larger body and secondary text, tighter section gaps and visible focus.
-- Native details/summary mobile menu works without JavaScript; normal static links remain primary navigation.
-- Portal hotspots only enhance desktop above 1100px; the same destinations are clear links on smaller screens and without JS.
-- Future portals are informative buttons, not links to invented games.
-- Gallery uses native dialog, explicit Close, Escape, touch-sized controls and ordinary image-link fallback.
-- Reduced-motion CSS retained; no autoplay or decorative animation.
-- 404 resource/navigation paths resolve from the domain root for nested unknown URLs.
-- No changes to the external privacy-policy repository or live GitHub settings.
-
-## Verification limits
-The browser URL policy rejected the local file preview because file: URLs are not allowed. No workaround, alternate browser surface or indirect browser execution was attempted. Actual rendered desktop/tablet/mobile pages, portal alignment, horizontal overflow, native menu/dialog behavior, video playback and browser console state have not been verified in-browser. Contrast and performance have not been measured. Source checks do not establish WCAG certification or a performance score.
-
-The existing external privacy URL and a production deployment were not revalidated. Owner browser review using the README checklist remains necessary before publishing. No new deployment was made.
+The supplied images were fully re-encoded for web delivery; no AI redraw, retouch or raster crop was performed. All framing is in website CSS, and the complete reference sheet/home screen remain accessible. Nothing was published and no game or remote repository was modified.

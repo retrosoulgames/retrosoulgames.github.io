@@ -1,0 +1,43 @@
+{
+  "assets": [
+    {
+      "file": "assets/character-sheet.webp",
+      "width": 1779,
+      "height": 884,
+      "sourceFile": "codex-clipboard-499b2a77-bcd2-437a-9753-d8adedf8db5d.png",
+      "sourceSHA256": "eeb79ae17fa423b3222044e0af90e1088778225248d088d03d30318a2a3e7ac1",
+      "bytes": 485280,
+      "processing": "Full image re-encoded as WebP; no redraw, retouch or raster crop. Website framing uses CSS."
+    },
+    {
+      "file": "assets/hana-home-screen.webp",
+      "width": 1671,
+      "height": 941,
+      "sourceFile": "codex-clipboard-c297fc1a-c2f0-4509-b641-795573098bdf.png",
+      "sourceSHA256": "694711ffe937f03ca32e77f1d8d15f063cbd5fd2a2c28b4fb4648475d7a96c19",
+      "bytes": 460864,
+      "processing": "Full image re-encoded as WebP; no redraw, retouch or raster crop. Website framing uses CSS."
+    }
+  ],
+  "profileDisplayWindows": {
+    "ren": {
+      "x": 25,
+      "y": 55,
+      "width": 850,
+      "height": 807
+    },
+    "hana": {
+      "x": 905,
+      "y": 55,
+      "width": 850,
+      "height": 807
+    }
+  },
+  "bannerWindow": {
+    "x": 0,
+    "y": 0,
+    "width": 1671,
+    "height": 510
+  },
+  "version": "3.3"
+}

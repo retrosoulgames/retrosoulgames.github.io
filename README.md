@@ -1,5 +1,5 @@
-# RetroSoul Games — Website v3.1
-Review package · 25 October 2026
+# RetroSoul Games — Website v3.3.1
+Review package · 31 October 2026
 
 This is an evolution of the supplied v2 ZIP. Its gateway artwork, circular RS emblem, midnight/gold palette, serif headings, game concept illustrations, actual gameplay screenshots and 18-second silent video are retained. No repository, account setting or deployment has been changed.
 
@@ -7,11 +7,12 @@ This is an evolution of the supplied v2 ZIP. Its gateway artwork, circular RS em
 - `/` — a shorter cinematic introduction and first-world preview.
 - `/worlds/` — permanent catalog; one current game, with no invented announcements.
 - `/worlds/cedar-shadows-hana/` — game hero, story, facts, video, screenshots, testing notice and privacy link.
+- `/worlds/cedar-shadows-hana/chronicle/` — the English illustrated story companion, character profiles, Order hierarchy and five chapters; ending spoilers are collapsed.
 - `/studio/` — studio philosophy across genres.
 - `/contact/` — studio email action; no backend form.
 - `404.html` — missing-page response.
 
-Each directory has its own index.html. All primary pages have unique title, description, canonical URL and sharing metadata. The game uses an additional sharing image derived from its retained concept art. The sitemap lists only the five real content URLs.
+Each directory has its own index.html. All primary pages have unique title, description, canonical URL and sharing metadata. The game uses an additional sharing image derived from its retained concept art. The sitemap lists only the six real content URLs.
 
 ## Local review
 Extract the entire ZIP before opening `index.html`. With JavaScript enabled, directory links are adapted automatically for direct file opening. If JavaScript is disabled, or for the most accurate clean-URL review, serve the extracted directory over local HTTP:
@@ -36,7 +37,7 @@ Do not edit, move, overwrite or delete the separate `cedar-shadows-privacy` repo
 GitHub reference: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
 ## Shared navigation and footer
-All five pages include the same navigation and footer as static HTML, so they work without JavaScript or a runtime fetch. `aria-current="page"` identifies the current main page. On the game page Our Worlds is visually marked as the parent section; the breadcrumb links to its catalog.
+All six pages include the same navigation and footer as static HTML, so they work without JavaScript or a runtime fetch. `aria-current="page"` identifies the current main page. On the game page Our Worlds is visually marked as the parent section; the breadcrumb links to its catalog.
 
 Below 700px, navigation uses native HTML details/summary: Menu opens and closes with mouse, touch, Enter or Space without JS. JS adds outside-click and Escape closing. Focus remains visible.
 
@@ -93,3 +94,39 @@ The owner supplied these exact links. They could not be independently fetched by
 The site asks visitors to use the same Google account for all three steps and stay opted in for at least 14 days. This is the studio's request; the site does not promise production approval or track participation. Availability remains In Testing, and installation is described as closed-test access, not a public release.
 
 When the game publicly releases, revise the testing invitation and availability wording together. Until then, retain the account/eligibility guidance and make sure Google Group membership and the Play Console tester configuration stay consistent. No change to those services is made by this website package.
+
+
+## v3.2 — The Cedar Chronicle integration
+New production path: https://retrosoulgames.github.io/worlds/cedar-shadows-hana/chronicle/
+
+The supplied Cedar-Shadows-Legend-HTML-v2 page is integrated as an English-only story companion. Its complete English lore, 15 profiles, 21 illustrations, Order hierarchy, five-chapter route and optional ending are retained. The supplied Georgian translation dictionary and language controls are not included.
+
+The original main-site pages remain the studio shell. Game overview and Chronicle share a local game-navigation row; links on the game page and catalog make the new page discoverable. The homepage remains concise and genre-neutral. Existing closed-test actions remain intact.
+
+The standalone source embedded every image in a roughly 5.25 MB HTML file. The integrated Chronicle HTML is roughly 30 KB. Its 21 source WebP files are extracted byte-for-byte into `assets/chronicle/`, with dimensions reserved and below-the-fold images lazy-loaded. The initial page no longer carries every image in its HTML. All original transparency is retained. No new character artwork was generated.
+
+Edit Chronicle text in `worlds/cedar-shadows-hana/chronicle/index.html`. Its visual rules live in `chronicle.css`, scoped to `.chronicle-page` so its Japanese-inspired identity does not alter the studio homepage. The small game-navigation and story-preview rules in that stylesheet are shared with the game and catalog pages. No extra JavaScript, runtime translation, build step or external library is added.
+
+Keep the `details#ending` element CLOSED by default (do not add `open`). The visible spoiler note also clarifies that the ending is part of Hana's story, not an announcement of another game. The overview remains spoiler-light. The Chronicle identifies its content as world lore and illustration; story presentation may differ from the test build.
+
+Preview the page through its links from the game overview, then test the chapter links, hierarchy links, first-rescue disclosure, ending disclosure and mobile Menu. The existing file-opening helper supports the new directory depth; local HTTP remains the recommended review method. Inspect the six real pages before deployment. The preview server in this environment started but its loopback readiness request timed out, so browser layout and interaction QA remain unverified here. No hosting or repository changes were made.
+
+
+## v3.3 — New Ren/Hana references and current home screen
+The two owner-supplied images are now used without redrawing or retouching. Full-size WebP encodes keep the original compositions at 1779 × 884 and 1671 × 941; a full-image JPEG is provided for the game-page social preview.
+
+- Chronicle: Ren and Hana have separate CSS-framed views of the supplied reference sheet, showing each full figure and both facial views. Profile metadata sits below the art. View full character sheet links open the complete sheet. Their written biographies are unchanged.
+- Homepage/catalog/game overview: game banners now use only the top artwork from the new game home screen, keeping the actual menu buttons outside the banner window. The studio's gateway hero remains unchanged.
+- Game overview: a full, uncropped home-screen figure shows Story, Endless and Memories and can open in the existing image viewer. It is labelled as a game home screen; the controls inside the image do not act as website buttons.
+- The existing gallery now has four images: home screen followed by the three gameplay captures. The viewer caption says Gallery; shared viewer JavaScript is unchanged.
+- The game's social metadata points to the full new screen and declares its real dimensions. The studio-wide sharing image is unchanged.
+
+New presentation rules are in `art-update.css`, loaded after the existing site styles on the four affected pages. `ART-UPDATE-MEDIA.json` documents source hashes, exact dimensions and source-coordinate display windows. The previous reference portraits and other artwork remain in the package as provenance; no original source was overwritten.
+
+When replacing these supplied images later, update the dimensions and CSS display windows together. The portrait windows are Ren [25,55,850,807] and Hana [905,55,850,807], measured from the same 1779 × 884 sheet. Banner framing uses only the top 1671 × 510 region of the 1671 × 941 home screen. These are CSS windows, not edited bitmap files. The full screen and full sheet links always show the uncropped images.
+
+Review the two portraits and banner framing at desktop and mobile widths, open the home screen in the viewer, check previous/next navigation across four images, and verify the complete reference-sheet links. Browser rendering remains unverified in this environment because the previously established local-preview route is unavailable. All content stays in English. In Testing status, three signup URLs, 14-day request, app-ads.txt and existing privacy links are preserved. Nothing has been deployed.
+
+
+## v3.3.1 — Chronicle cover consistency
+The outdated Chronicle cover is no longer displayed. Its overview invitation and Chronicle hero now use CSS-framed artwork from the updated game home screen. Chronicle sharing metadata also uses the new supplied screen. Existing source assets are retained as inactive provenance; no source artwork was deleted. Copy, navigation, profiles, closed-test steps and all verification resources are unchanged.

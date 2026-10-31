@@ -24,3 +24,11 @@ Use case: stylized-concept. Asset type: premium indie game studio website cinema
 
 ## v3 preservation
 All original v2 media is unchanged. The only added image is og-hana.jpg, a 1200 × 630 sharing derivative of the retained Hana promise concept illustration. No new image generation was used in v3. Portal effects are transparent HTML/CSS elements above the unchanged illustration.
+
+
+## v3.2 — supplied Chronicle assets
+The twenty-one WebP images in assets/chronicle/ were decoded from the supplied Cedar-Shadows-Legend-HTML-v2 HTML and copied byte-for-byte. No artwork was regenerated or retouched; alpha channels on the three ninja sprites are retained. The manifest records their dimensions and hashes. og-chronicle.jpg is a separate 1200 × 630 social preview derived from the supplied Chronicle hero with an English title. All pre-existing v3.1 media is unchanged.
+
+
+## v3.3 — owner-supplied new art
+`assets/character-sheet.webp` is a full-frame WebP encode of the supplied Ren/Hana character-reference PNG (1779 × 884). `assets/hana-home-screen.webp` and `assets/hana-home-screen-social.jpg` are full-frame encodes of the supplied new game home-screen PNG (1671 × 941). No new image generation, redraw, retouch or raster crop was used. CSS framing produces the displayed character and banner windows. Complete supplied image compositions remain accessible from the site. ART-UPDATE-MEDIA.json records source hashes and dimensions. The fifteen Chronicle biographies and existing art assets remain unchanged.

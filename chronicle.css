@@ -1,0 +1,118 @@
+/* Shared game-page integration. The studio's existing gateway and design stay unchanged. */
+.game-subnav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 32px;padding:12px 6%;border-bottom:1px solid var(--line);background:#0e1520;font-size:13px}
+.game-subnav a{min-height:42px;display:inline-flex;align-items:center;color:var(--muted);border-bottom:1px solid transparent}
+.game-subnav a:hover,.game-subnav a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold)}
+.chronicle-invitation{display:grid;grid-template-columns:1.1fr 1fr;gap:6%;align-items:center;border-top:1px solid var(--line);background:radial-gradient(ellipse at 75% 50%,#3d314d22,transparent 65%)}
+.chronicle-preview-art{display:block;border:1px solid var(--line)}
+.chronicle-preview-art img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.chronicle-invitation h2{font-size:50px;margin:17px 0 22px}
+.chronicle-invitation p:not(.eyebrow){font-size:16px;color:var(--muted);margin-bottom:18px}
+.chronicle-invitation .chronicle-invitation-note{font-size:13px!important}
+.chronicle-invitation .button{margin-top:4px}
+.story-chronicle-link{margin-left:24px}
+/* Chronicle-only styling: the global header, footer and main site are not restyled. */
+.chronicle-page .wrap{width:88%;max-width:var(--max);margin-inline:auto}
+.chronicle-page .chronicle-hero{min-height:650px;position:relative;isolation:isolate;display:flex;align-items:center;overflow:hidden}
+.chronicle-page .chronicle-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:66% 30%;z-index:-3}
+.chronicle-page .chronicle-hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#080c15f0 0%,#080c15b0 40%,#080c1520 85%),linear-gradient(0deg,#080c15,transparent 40%);z-index:-2}
+.chronicle-page .chronicle-hero-copy{padding:110px 0 100px}
+.chronicle-page .chronicle-hero h1{font-size:clamp(58px,6.8vw,91px);letter-spacing:-2px;max-width:650px}
+.chronicle-page .chronicle-hero-copy .eyebrow{margin-bottom:24px}
+.chronicle-page .hero-kicker{font-size:17px;color:#e0e3e8;max-width:485px;margin-top:28px;line-height:1.8}
+.chronicle-page .hero-index{display:flex;flex-wrap:wrap;gap:24px;margin-top:30px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
+.chronicle-page .hero-index>span{border-left:1px solid var(--gold);padding-left:12px}
+.chronicle-page .chronicle-back{position:absolute;left:6%;top:21px;z-index:1;color:#ead9bc;font-size:14px;min-height:42px;display:inline-flex;align-items:center}
+.chronicle-page .chronicle-art-note{position:absolute;bottom:24px;right:6%;left:6%;text-align:right;font-size:11px;color:#bec6d1}
+.chronicle-page .chapter-nav{position:sticky;top:0;z-index:6;background:#080c15f5;border-block:1px solid var(--line);backdrop-filter:blur(8px)}
+.chronicle-page .chapter-nav .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px 24px;min-height:66px;padding-block:6px}
+.chronicle-page .chapter-nav a{font-size:13px;padding:10px 0;min-height:44px;color:#cdd2db;display:inline-flex;align-items:center}
+.chronicle-page .chapter-nav a:hover{color:var(--gold)}
+.chronicle-page .chronicle-section{padding:70px 0;border-bottom:1px solid var(--line);scroll-margin-top:90px}
+.chronicle-page .section-heading{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:32px}
+.chronicle-page .section-heading h2{font-size:clamp(35px,4.2vw,53px);margin-top:13px;max-width:650px}
+.chronicle-page .section-intro{max-width:380px;font-size:15px;color:var(--muted)}
+.chronicle-page .legend-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:55px;align-items:start}
+.chronicle-page .chronicle-context{font-size:13px;color:#c0b6a8;max-width:860px;margin:-5px 0 30px}
+.chronicle-page .chronicle-lead{font:26px/1.5 Georgia,serif;color:#eddfc9}
+.chronicle-page .chronicle-copy>p+p{font-size:16px;color:var(--muted);margin-top:22px}
+.chronicle-page .chronicle-quote{border-left:1px solid var(--gold);padding-left:22px;margin-top:28px;color:var(--gold);font:25px/1.5 Georgia,serif}
+.chronicle-page .chronicle-quote cite{display:block;font:13px/1.8 Arial,sans-serif;color:var(--muted);margin-top:12px}
+.chronicle-page .story-figure img{width:100%;height:auto;border:1px solid var(--line)}
+.chronicle-page .story-figure figcaption{font-size:11px;color:var(--gold);margin-top:14px;letter-spacing:.7px}
+.chronicle-page .origin{margin-top:30px;border:1px solid var(--line);background:#101722}
+.chronicle-page .origin summary{cursor:pointer;padding:15px 18px;min-height:48px;color:var(--gold);font-size:14px}
+.chronicle-page .origin-body{padding:0 18px 20px}
+.chronicle-page .origin-body img{width:100%;height:auto;margin-bottom:15px}
+.chronicle-page .origin-body p{font-size:15px;color:var(--muted)}
+.chronicle-page summary:focus-visible{outline:3px solid #ffe0a0;outline-offset:5px}
+.chronicle-page .profile-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.chronicle-page .profile-grid.hero-profiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+.chronicle-page .profile{border:1px solid var(--line);background:linear-gradient(145deg,#111a27,#0c121d);display:flex;flex-direction:column;min-width:0;scroll-margin-top:95px}
+.chronicle-page .portrait{position:relative;isolation:isolate;aspect-ratio:1.08;background:#0b1420;overflow:hidden}
+.chronicle-page .portrait>img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.chronicle-page .portrait:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#0b1420dd,transparent 40%);pointer-events:none}
+.chronicle-page .portrait-category{position:absolute;bottom:15px;left:24px;right:20px;z-index:1;font-size:10px;line-height:1.6;letter-spacing:.9px;color:#efddbb}
+.chronicle-page .profile-body{padding:26px;display:flex;flex-direction:column;flex:1}
+.chronicle-page .profile h3{font-size:31px;margin:11px 0 18px;letter-spacing:-.5px}
+.chronicle-page .description{font-size:15px;line-height:1.8;color:var(--muted);flex:1}
+.chronicle-page .signature{font-size:13px;color:#dec28c;border-top:1px solid var(--line);padding-top:16px;margin-top:23px}
+.chronicle-page .hero-card .portrait{aspect-ratio:1.45}
+.chronicle-page .profile .portrait>img.web-portrait{object-fit:contain;object-position:center;padding:0}
+.chronicle-page .hero-profiles #sayo .portrait{aspect-ratio:1.45;background:radial-gradient(ellipse,#23302b,#0b1420 70%)}
+.chronicle-page .boss .portrait{aspect-ratio:1}
+.chronicle-page .troop .portrait{aspect-ratio:1.18;background:radial-gradient(ellipse at 50% 78%,#24323c,#101824 70%)}
+.chronicle-page .troop .portrait img{object-fit:contain;padding:25px 20px 32px}
+.chronicle-page .troop:nth-child(2) .portrait{background:radial-gradient(ellipse at 50% 78%,#3b1724,#12131e 70%)}
+.chronicle-page .troop:nth-child(3) .portrait{background:radial-gradient(ellipse at 50% 78%,#34362e,#101824 70%)}
+.chronicle-page #armored-samurai .portrait,.chronicle-page #ivory-marksman .portrait{aspect-ratio:1;background:#0b1420}
+.chronicle-page #armored-samurai .portrait img,.chronicle-page #ivory-marksman .portrait img{padding:0}
+.chronicle-page .sayo-note{border-left:1px solid var(--gold);background:#101722;padding:30px}
+.chronicle-page .sayo-note h3{font-size:31px;margin-bottom:18px}
+.chronicle-page .sayo-note p,.chronicle-page .sayo-story .chronicle-copy>p{font-size:16px;color:var(--muted)}
+.chronicle-page .order-panel{border:1px solid var(--line);background:#101722;display:grid;grid-template-columns:1.05fr 1fr}
+.chronicle-page .council-art{position:relative;min-width:0;min-height:360px}
+.chronicle-page .council-art img{height:100%;width:100%;object-fit:cover;object-position:center}
+.chronicle-page .order-copy{padding:34px}
+.chronicle-page .order-copy h3{font-size:35px;margin:13px 0 21px}
+.chronicle-page .order-copy p{font-size:15px;color:var(--muted)}
+.chronicle-page .order-facts{margin:25px 0 0}
+.chronicle-page .order-facts>div{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:90px 1fr;gap:18px}
+.chronicle-page .order-facts dt{font-size:11px;color:var(--gold)}
+.chronicle-page .order-facts dd{font-size:14px;margin:0;color:#d1d6dc}
+.chronicle-page .hierarchy-title{display:flex;align-items:center;justify-content:space-between;gap:30px;margin:40px 0 24px}
+.chronicle-page .hierarchy-title h3{font-size:30px}
+.chronicle-page .hierarchy-title p{font-size:14px;color:var(--muted);max-width:490px}
+.chronicle-page .hierarchy-row{display:grid;grid-template-columns:180px repeat(2,minmax(0,1fr));gap:24px;padding:20px 0;border-top:1px solid var(--line)}
+.chronicle-page .rank-label{font-size:11px;letter-spacing:.8px;color:var(--gold);align-self:center}
+.chronicle-page .hierarchy a{display:block;padding:18px;background:#101722;border:1px solid var(--line)}
+.chronicle-page .hierarchy a:hover{border-color:var(--gold)}
+.chronicle-page .hierarchy a b{font:23px/1.4 Georgia,serif;color:#edddbd}
+.chronicle-page .hierarchy a span{display:block;font-size:14px;color:var(--muted);margin-top:8px}
+.chronicle-page .root-rank a{border-color:#e4c58b66;background:#171923}
+.chronicle-page .forces{grid-template-columns:180px repeat(3,minmax(0,1fr))}
+.chronicle-page .forces a b{font-size:20px}
+.chronicle-page .roles-note{font-size:14px;color:var(--muted);border-left:1px solid var(--gold);padding-left:18px;margin-top:28px;max-width:920px}
+.chronicle-page .route{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line);list-style:none;padding:0;margin:25px 0 0}
+.chronicle-page .route li{padding:24px 19px;border-right:1px solid var(--line)}
+.chronicle-page .route li:last-child{border:0}
+.chronicle-page .route b{display:block;font:28px/1 Georgia,serif;color:var(--gold);margin-bottom:14px}
+.chronicle-page .route strong{display:block;font-size:15px;font-weight:400}
+.chronicle-page .route small{display:block;font-size:13px;color:var(--muted);margin-top:10px;line-height:1.6}
+.chronicle-page .chronicle-spoiler-note{font-size:14px;color:var(--muted);margin-top:40px;max-width:800px}
+.chronicle-page .spoilers{border:1px solid var(--line);background:#0e1520;margin-top:18px}
+.chronicle-page .spoilers>summary{cursor:pointer;padding:24px 28px;color:#e6d0aa;font-size:14px;list-style-position:inside;min-height:64px}
+.chronicle-page .ending-body{padding:10px 28px 30px}
+.chronicle-page .ending-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.chronicle-page .ending-grid img{aspect-ratio:1.85;object-fit:cover;width:100%;height:auto;border:1px solid var(--line)}
+.chronicle-page .ending-grid h3{font-size:30px;margin:22px 0 15px}
+.chronicle-page .ending-grid p{font-size:15px;color:var(--muted)}
+.chronicle-page .ending-grid blockquote{font:21px/1.6 Georgia,serif;color:var(--gold);border-left:1px solid var(--gold);padding-left:18px;margin-top:20px}
+.chronicle-page .chronicle-closing{padding:60px 0;text-align:center;background:radial-gradient(ellipse at bottom,#16232b,transparent 70%)}
+.chronicle-page .chronicle-closing h2{font-size:43px;max-width:730px;margin:16px auto 28px}
+.chronicle-page .chronicle-button{display:inline-flex;min-height:48px;align-items:center;border:1px solid var(--gold);padding:12px 24px;font-size:14px;color:var(--gold)}
+.chronicle-page .chronicle-button:hover{background:var(--gold);color:var(--bg)}
+@media(max-width:1050px){.chronicle-page .profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.chronicle-page .legend-grid{gap:35px}.chronicle-page .section-heading{gap:30px}.chronicle-page .forces{grid-template-columns:150px 1fr 1fr}.chronicle-page .forces a:last-child{grid-column:2/4}.chronicle-page .hierarchy-row{gap:20px}.chronicle-page .rank-label{font-size:10px}.chronicle-page .order-copy{padding:26px}.chronicle-page .order-copy h3{font-size:31px}}
+@media(max-width:760px){.game-subnav{gap:4px 18px;justify-content:flex-start;font-size:12px}.chronicle-invitation{grid-template-columns:1fr;gap:32px}.chronicle-invitation h2{font-size:43px}.story-chronicle-link{margin-left:0;display:flex;max-width:max-content}.chronicle-page .wrap{width:88%}.chronicle-page .chronicle-hero{min-height:690px;align-items:flex-end}.chronicle-page .chronicle-hero>img{object-position:61% 10%}.chronicle-page .chronicle-hero:after{background:linear-gradient(0deg,#080c15 0%,#080c15e0 40%,#080c1520 90%)}.chronicle-page .chronicle-hero-copy{padding:250px 0 80px}.chronicle-page .chronicle-hero h1{font-size:61px;letter-spacing:-1px}.chronicle-page .chronicle-hero-copy .eyebrow{font-size:10px;margin-bottom:17px}.chronicle-page .hero-kicker{font-size:16px;margin-top:22px}.chronicle-page .hero-index{gap:18px;font-size:10px}.chronicle-page .chronicle-art-note{text-align:left;font-size:10px;bottom:20px}.chronicle-page .chapter-nav .wrap{justify-content:flex-start;gap:2px 22px;padding-block:8px}.chronicle-page .chapter-nav a{font-size:12px;min-height:40px;padding-block:8px}.chronicle-page .chronicle-section{padding:50px 0;scroll-margin-top:140px}.chronicle-page .profile{scroll-margin-top:140px}.chronicle-page .section-heading{display:block;margin-bottom:26px}.chronicle-page .section-heading h2{font-size:38px}.chronicle-page .section-intro{font-size:15px;max-width:600px;margin-top:20px}.chronicle-page .legend-grid{grid-template-columns:1fr;gap:32px}.chronicle-page .chronicle-lead{font-size:24px}.chronicle-page .chronicle-copy>p+p{font-size:16px}.chronicle-page .chronicle-context{font-size:13px}.chronicle-page .profile-grid,.chronicle-page .profile-grid.hero-profiles{grid-template-columns:1fr}.chronicle-page .hero-card .portrait,.chronicle-page .hero-profiles #sayo .portrait{aspect-ratio:1.2}.chronicle-page .profile-body{padding:25px}.chronicle-page .profile h3{font-size:32px}.chronicle-page .description{font-size:16px}.chronicle-page .signature{font-size:14px}.chronicle-page .order-panel{grid-template-columns:1fr}.chronicle-page .council-art{min-height:0;aspect-ratio:1.8}.chronicle-page .council-art img{height:100%}.chronicle-page .hierarchy-title{display:block}.chronicle-page .hierarchy-title p{margin-top:15px}.chronicle-page .hierarchy-row{grid-template-columns:1fr;gap:14px}.chronicle-page .rank-label{font-size:11px}.chronicle-page .forces a:last-child{grid-column:auto}.chronicle-page .hierarchy a b{font-size:23px}.chronicle-page .route{grid-template-columns:1fr}.chronicle-page .route li{display:grid;grid-template-columns:35px 1fr;gap:4px 18px;border-right:0;border-bottom:1px solid var(--line);padding:23px}.chronicle-page .route b{grid-row:1/3;align-self:center;margin:0}.chronicle-page .route small{grid-column:2;margin:0}.chronicle-page .ending-grid{grid-template-columns:1fr;gap:35px}.chronicle-page .spoilers>summary{font-size:13px;padding:20px}.chronicle-page .ending-body{padding:8px 20px 25px}.chronicle-page .chronicle-closing h2{font-size:34px}.chronicle-page .chronicle-quote{font-size:23px}}
+@media(max-width:380px){.chronicle-page .chronicle-hero h1{font-size:52px}.chronicle-page .hero-index{gap:13px;font-size:9px}.chronicle-page .chapter-nav .wrap{gap:2px 18px}.chronicle-page .chapter-nav a{font-size:11px}.chronicle-page .section-heading h2{font-size:34px}.chronicle-page .profile-body{padding:22px}}
+@media(prefers-reduced-motion:reduce){.chronicle-page{scroll-behavior:auto}}
+.chronicle-page .chronicle-return{display:block;margin:23px auto 0;max-width:max-content;color:var(--muted);font-size:13px;padding:8px}.chronicle-page .chronicle-return:hover{color:var(--gold)}
