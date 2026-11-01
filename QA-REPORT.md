@@ -1,3 +1,11 @@
+# v3.4.1 — Website privacy desktop layout
+
+The privacy article's 880px maximum border-box width inherited viewport-based `.section` horizontal padding. On large desktop screens that padding consumed the available content width. The fix explicitly sets a 100% available width, the existing 880px cap and bounded 20–48px gutters on `.privacy-page .website-privacy`. Its selector overrides the general section gutters at every breakpoint without changing the shared studio layout.
+
+Checks: only this CSS rule and release documentation differ from v3.4; the remaining CSS is identical after substituting that rule. HTML, policy content, analytics.js, script.js, all assets and app-ads.txt are byte-identical. Horizontal content space remains positive at 320, 390, 600, 700, 768, 880, 1024, 1280, 1440, 1920, 2554, 2560 and 3840 CSS pixels. These are source/box-model checks, not browser screenshots. Browser rendering remains unverified because the previously unavailable local-preview infrastructure has not been repaired. Nothing has been published.
+
+---
+
 # v3.4 GA4 checks — 1 November 2026
 
 Prepared against the current public repository commit `133decd6c9f0f3374cb3cff4497aa037e3b70d89`. This package has not been uploaded or deployed; no Google Analytics account settings were changed.

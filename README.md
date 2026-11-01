@@ -1,5 +1,8 @@
-# RetroSoul Games — Website v3.4 / GA4
+# RetroSoul Games — Website v3.4.1 / GA4
 Prepared for owner upload · 1 November 2026
+
+**v3.4.1 layout correction:** `analytics-consent.css` now sets explicit, bounded horizontal padding and full available width on the constrained website privacy article. This prevents the global `.section` desktop gutters from collapsing its text column. To update an already uploaded v3.4 site, replace only the root `analytics-consent.css`, then hard-refresh the browser. Analytics behavior, policy text and all other page content are unchanged.
+
 
 **Current update:** GA4 `G-VBMXXRL2V6` is integrated on all eight HTML pages with consent required globally. Google’s optional script loads only after acceptance. Outbound links use GA4 Enhanced Measurement without an extra click listener. Footer controls reopen analytics preferences; `privacy.html` explains website analytics separately from the unchanged game privacy policy.
 
