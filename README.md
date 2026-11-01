@@ -1,5 +1,10 @@
-# RetroSoul Games — Website v3.3.1
-Review package · 31 October 2026
+# RetroSoul Games — Website v3.4 / GA4
+Prepared for owner upload · 1 November 2026
+
+**Current update:** GA4 `G-VBMXXRL2V6` is integrated on all eight HTML pages with consent required globally. Google’s optional script loads only after acceptance. Outbound links use GA4 Enhanced Measurement without an extra click listener. Footer controls reopen analytics preferences; `privacy.html` explains website analytics separately from the unchanged game privacy policy.
+
+Read [ANALYTICS.md](ANALYTICS.md) for upload steps, consent behavior, verification and Google Analytics Realtime instructions. **This update has not been published.** Local behavior/source checks passed; live receipt in GA4 must be confirmed after owner upload. Earlier version notes below are historical.
+
 
 This is an evolution of the supplied v2 ZIP. Its gateway artwork, circular RS emblem, midnight/gold palette, serif headings, game concept illustrations, actual gameplay screenshots and 18-second silent video are retained. No repository, account setting or deployment has been changed.
 
@@ -12,7 +17,7 @@ This is an evolution of the supplied v2 ZIP. Its gateway artwork, circular RS em
 - `/contact/` — studio email action; no backend form.
 - `404.html` — missing-page response.
 
-Each directory has its own index.html. All primary pages have unique title, description, canonical URL and sharing metadata. The game uses an additional sharing image derived from its retained concept art. The sitemap lists only the six real content URLs.
+Each directory has its own index.html. All primary pages have unique title, description, canonical URL and sharing metadata. The game uses an additional sharing image derived from its retained concept art. The sitemap lists the six original content URLs plus the new website privacy page.
 
 ## Local review
 Extract the entire ZIP before opening `index.html`. With JavaScript enabled, directory links are adapted automatically for direct file opening. If JavaScript is disabled, or for the most accurate clean-URL review, serve the extracted directory over local HTTP:
@@ -24,7 +29,7 @@ All actual site navigation uses relative directory links. Production canonical U
 ## Deploy only after approving the review
 1. Back up the existing `retrosoulgames/retrosoulgames.github.io` root repository.
 2. Copy the ZIP CONTENTS into that repository root. Keep `worlds/`, `studio/`, `contact/` and `assets/` as directories; do not add an extra enclosing folder. Retain `.nojekyll`.
-3. Do not delete unrelated repository files or workflows. If root `app-ads.txt` already matches the included record, leave the existing file unchanged. The package record is exactly 58 bytes with no BOM or newline:
+3. Do not delete unrelated repository files or workflows. If root `app-ads.txt` already matches the included record, leave the existing file unchanged. The current production file, including its existing trailing newline, is preserved byte-for-byte. Its record is:
    `google.com, pub-9369958314749030, DIRECT, f08c47fec0942fa0`
 4. Publishing commits to an already configured Pages branch can immediately publish the change. Commit/upload only after owner approval.
 5. In repository Settings → Pages → Build and deployment, use Deploy from a branch, `main`, `/(root)`. If already configured, retain those settings.
@@ -56,7 +61,7 @@ On smaller screens, hotspots are disabled in favor of a clear Hana text link and
 - Before public release, keep every status as In Testing. Update the homepage card, catalog card, game hero, facts, availability panel, descriptions and `games.json` together.
 - The game page links to the owner-supplied closed-test signup and installation URLs. Keep closed-test access separate from a future public release; update the availability wording only when a public release is confirmed.
 - The video uses native controls, no autoplay, no audio and `preload="none"`. Gallery links open original WebP assets without JS; native dialog enhancement adds Previous/Next, arrow keys, Escape and focus restoration.
-- Do not add trackers, remote dependencies or storage unless separately requested.
+- GA4 is now included at the owner’s request, gated by explicit consent. Do not add another tag, tracker or consent storage without reviewing `ANALYTICS.md`.
 
 ## Add another game
 1. Choose a real announced game's slug and create `worlds/your-game-slug/index.html`, using the existing Hana page as a structural reference.
