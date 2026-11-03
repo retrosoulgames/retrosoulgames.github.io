@@ -129,7 +129,7 @@ dialog button{font-size:13px;min-height:44px}
 .game-hero-content .button.gold:hover{background:#f7dda9}
 .game-card-actions{display:flex;flex-direction:column;align-items:stretch;gap:6px;flex-shrink:0}
 .game-card-actions .button{margin-top:0}
-.testing-card-link{justify-content:center;font-size:13px;gap:16px}
+.store-card-link{justify-content:center;font-size:13px;gap:16px}
 .testing-section{background:radial-gradient(ellipse at 80% 10%,#4a3e6020,transparent 65%);border-bottom:1px solid var(--line)}
 .testing-heading{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .testing-heading h2{font-size:47px;margin-top:16px}
@@ -147,5 +147,19 @@ dialog button{font-size:13px;min-height:44px}
 .release-panel .button{margin-bottom:12px}
 @media(max-width:1050px){.testing-steps li{padding:20px}.testing-steps .button{font-size:12px}.testing-steps h3{font-size:23px}.game-card-actions{max-width:285px}}
 @media(max-width:900px){.testing-steps{grid-template-columns:1fr}.testing-steps p{margin-bottom:18px}.testing-steps .button{width:auto;font-size:14px;max-width:100%}.testing-notes{gap:24px}.game-card-actions{max-width:250px}}
-@media(max-width:700px){.game-card-actions{max-width:none;width:100%;margin-top:24px}.testing-heading{display:block}.testing-heading h2{font-size:37px}.testing-heading>.status{margin-top:20px}.testing-intro{font-size:16px}.testing-steps li{padding:24px}.testing-steps h3{font-size:26px}.testing-notes{grid-template-columns:1fr;gap:20px}.game-hero-actions{gap:12px}.game-hero-actions .button{font-size:12px}.testing-card-link{font-size:14px}}
+@media(max-width:700px){.game-card-actions{max-width:none;width:100%;margin-top:24px}.testing-heading{display:block}.testing-heading h2{font-size:37px}.testing-heading>.status{margin-top:20px}.testing-intro{font-size:16px}.testing-steps li{padding:24px}.testing-steps h3{font-size:26px}.testing-notes{grid-template-columns:1fr;gap:20px}.game-hero-actions{gap:12px}.game-hero-actions .button{font-size:12px}.store-card-link{font-size:14px}}
 @media(max-width:380px){.testing-heading h2{font-size:33px}.testing-steps li{padding:20px}.testing-steps .button{font-size:12px}.game-hero-actions{align-items:stretch;flex-direction:column;max-width:240px}}
+
+/* Production storefront: retain the studio palette and existing actions. */
+.play-availability{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,.8fr);gap:44px;align-items:center;background:radial-gradient(ellipse at 80% 10%,#4a3e6020,transparent 65%);border-bottom:1px solid var(--line)}
+.play-availability h2{font-size:47px;margin:16px 0 24px}
+.play-availability-copy>p:not(.eyebrow){max-width:670px;font-size:16px;color:var(--muted)}
+.play-availability-card{min-width:0;padding:30px;border:1px solid var(--line);background:#111923}
+.play-platform{margin:14px 0 24px;font-size:16px;color:var(--muted)}
+.play-store-note{margin-top:16px;font-size:14px;color:var(--muted)}
+.store-cta{font-size:14px;line-height:1.5;min-height:49px}
+.play-availability-card .store-cta{width:100%;justify-content:center;text-align:center;gap:16px}
+.store-status{line-height:1.5;white-space:normal}
+.facts .store-status{max-width:240px}
+@media(max-width:900px){.play-availability{grid-template-columns:1fr;gap:28px}.play-availability-card{max-width:540px}}
+@media(max-width:700px){.game-art>.store-status{top:52px;left:25px;right:auto;max-width:calc(100% - 50px);font-size:11px}.play-availability h2{font-size:37px}.play-availability-card{padding:24px}.game-hero-actions .store-cta,.game-card-actions .store-cta{font-size:14px;width:100%;justify-content:center;gap:14px}.game-hero-actions{align-items:stretch}.game-hero-actions .store-cta{max-width:300px}.store-card-link{min-height:49px}.game-hero-content>.store-status{max-width:100%}}
