@@ -1,6 +1,6 @@
 # RetroSoul Games — GA4 integration
 
-Analytics implementation prepared 1 November 2026; guide updated 3 November 2026 for the owner’s future production-launch package. Analytics code and consent behavior are unchanged.
+Prepared 1 November 2026 against production source commit `133decd6c9f0f3374cb3cff4497aa037e3b70d89`.
 Measurement ID: **G-VBMXXRL2V6**. No repository or account settings were changed; the owner will upload this package.
 
 ## What is included
@@ -9,7 +9,7 @@ Measurement ID: **G-VBMXXRL2V6**. No repository or account settings were changed
 - The official asynchronous `https://www.googletagmanager.com/gtag/js?id=G-VBMXXRL2V6` is loaded only after explicit analytics consent or a still-valid previously saved acceptance. It is never loaded by the site before a choice, after rejection, or in local/file previews. No Google preconnect, pixel or cookieless consent ping is added before consent.
 - One `gtag('config', …)` per document generates the initial `page_view`. There is no manual page-view event or second Analytics/Tag Manager installation.
 - Outbound clicks use GA4's own **Enhanced Measurement**, producing the standard **`click`** event with `outbound`, `link_domain` and `link_url`. No overlapping custom click listener was added. The public Google tag returned for this ID on 1 November 2026 declares `vtp_enableOutboundClick: true` and `vtp_enablePageView: true`; this is configuration evidence, not proof of receipt in reports.
-- The Play Store action is a `click` with `link_domain = play.google.com` and `link_url = https://play.google.com/store/apps/details?id=com.moonveil.forestembers`. A click measures someone following the link, not an installation.
+- The Play Store action is a `click` with `link_domain = play.google.com` and `link_url = https://play.google.com/store/apps/details?id=com.moonveil.forestembers`. The opt-in URL also points to play.google.com; use **link_url** to distinguish them. A click measures someone following the link, not an installation or successful closed-test signup.
 - Consent uses Google's **basic consent mode**. `analytics_storage` is granted only on acceptance. `ad_storage`, `ad_user_data` and `ad_personalization` remain denied. Google Signals and ad personalization are disabled in the website tag. Android and AdMob are outside this change.
 - Initial page/referrer URLs passed to the tag omit query strings and fragments. No user ID, user data, custom dimensions or form values are supplied by this integration.
 
@@ -29,7 +29,7 @@ The separate **website** policy is `https://retrosoulgames.github.io/privacy.htm
 
 1. Back up the existing repository, then extract the package.
 2. Upload the **contents** to `retrosoulgames/retrosoulgames.github.io`, retaining the existing directory structure. Do not upload the ZIP itself or put its contents inside an extra parent directory. Do not delete unrelated files or workflows.
-3. For the production-launch package’s changed-file list, see `LAUNCH-REPORT.md`. The existing analytics and privacy files are retained; `app-ads.txt` requires no change.
+3. The changed existing files are the seven HTML pages, `sitemap.xml`, `README.md` and `QA-REPORT.md`. New files are `analytics.js`, `analytics-consent.css`, `privacy.html` and this guide. Existing `script.js`, site styles, artwork, video, game data and `app-ads.txt` need no replacement.
 4. Keep the current Pages publishing settings. Commit the files and wait for GitHub's existing Pages deployment to finish. Do not modify the Android project, AdMob configuration or `cedar-shadows-privacy` repository.
 5. Hard-refresh the homepage and a nested game/Chronicle page. Ensure that all three new public assets (`analytics.js`, `analytics-consent.css`, `privacy.html`) return successfully. Check the footer's website/game policy links.
 
@@ -41,7 +41,7 @@ Use a fresh private browser session and temporarily disable an ad blocker **for 
 2. Choose **Reject analytics**, follow an internal link and reload. Confirm that optional Google requests and analytics cookies remain absent. The banner should stay dismissed; footer settings should reopen it.
 3. Open **Analytics settings → Accept analytics**. Expect one `gtag/js?id=G-VBMXXRL2V6` request in this document. Filter Network for `collect`; GA4 requests should contain `tid=G-VBMXXRL2V6`. Requests can batch events, so count `page_view` events, not simply the number of HTTP requests.
 4. Follow an internal page link. Expect one initial `page_view` for that new document, not two. Reopening settings and accepting again on the same page must not configure or load the tag again.
-5. On the game page, follow **Get it on Google Play** to the supplied Google Play listing. With Preserve log enabled, verify the GA4 `click` event, `outbound=true`, and the intended `link_url`. No installation needs to be completed for this verification.
+5. On the game page, follow **Install the game** to the supplied Google Play listing. With Preserve log enabled, verify the GA4 `click` event, `outbound=true`, and the intended `link_url`. The Google Group and closed-test opt-in links are outbound events too. No installation or opt-in needs to be completed for this test.
 6. Withdraw via **Analytics settings → Reject analytics**. The page reloads, `rsg_ga*` cookies disappear and further page navigation must not load the Google tag. Test this with another site tab open too.
 7. Test keyboard access (Tab, Enter, Space and Escape), visible focus, small mobile widths and 200% zoom. Ensure the banner scrolls if necessary and the existing navigation/gallery still work.
 
