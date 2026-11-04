@@ -1,0 +1,31 @@
+/* v3.3 user-supplied character references and current game home screen. */
+.chronicle-page #ren .character-sheet-portrait,.chronicle-page #hana .character-sheet-portrait{aspect-ratio:850/807;position:relative;overflow:hidden;background:#0b1420}
+.chronicle-page #ren .character-sheet-image,.chronicle-page #hana .character-sheet-image{position:absolute;max-width:none;width:209.294117647%;height:109.541511772%;top:-6.815365552%;object-fit:fill;object-position:initial;padding:0}
+.chronicle-page #ren .character-sheet-image{left:-2.941176471%}
+.chronicle-page #hana .character-sheet-image{left:-106.470588235%}
+.chronicle-page .character-sheet-portrait:after{display:none}
+.chronicle-page .reference-profile-meta{font-size:11px;line-height:1.6;color:#c8ced7;letter-spacing:.6px;display:block;margin-bottom:14px}
+.chronicle-page .reference-sheet-link{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:44px;margin-top:16px;padding:7px 0;font-size:13px;color:var(--gold);border-bottom:1px solid var(--line)}
+.chronicle-page .reference-sheet-link:hover{border-bottom-color:var(--gold)}
+/* Only the upper 510px of the 1671 x 941 image is used as banner art.
+   Extra image height and object-fit:cover preserve that window at any container size. */
+.game-cover-window{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.game-cover-window>img{width:100%;height:184.509803922%;max-width:none;object-fit:cover;object-position:55% top;display:block}
+.game-page-hero>.game-cover-window{z-index:-2}
+.game-art>.game-cover-window{z-index:0}
+.home-screen-section{border-bottom:1px solid var(--line);background:#0b121c;padding-top:52px;padding-bottom:54px}
+.home-screen-section h2{font-size:39px;margin-top:14px}
+.home-screen-section figure{margin-top:28px}
+.home-screen-section .gallery-link{border-color:#e4c58b55;box-shadow:0 16px 40px #0003}
+.home-screen-section .gallery-link:hover{border-color:var(--gold)}
+.home-screen-section img{width:100%;height:auto;aspect-ratio:1671/941;display:block}
+.home-screen-section figcaption{font-size:13px;color:var(--muted);line-height:1.8;margin-top:16px;max-width:850px}
+@media(max-width:700px){.home-screen-section h2{font-size:32px}.home-screen-section .micro{margin-top:15px}.home-screen-section{padding-block:42px}.home-screen-section figcaption{font-size:13px}.chronicle-page .reference-sheet-link{font-size:14px}.game-cover-window>img{object-position:57% top}}
+@media(max-width:380px){.home-screen-section h2{font-size:29px}}
+
+/* v3.3.1: replace the retired Chronicle cover consistently. */
+.chronicle-preview-art{position:relative;aspect-ratio:16/9;overflow:hidden}
+.chronicle-preview-art .game-cover-window>img{width:100%;height:184.509803922%;max-width:none;object-fit:cover;object-position:55% top}
+.chronicle-page .chronicle-hero>.game-cover-window{z-index:-3}
+.chronicle-page .chronicle-hero .game-cover-window>img{object-position:30% top}
+@media(max-width:760px){.chronicle-page .chronicle-hero .game-cover-window>img{object-position:55% top}}

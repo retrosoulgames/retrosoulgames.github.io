@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Cedar Shadows: Hana",
+    "slug": "cedar-shadows-hana",
+    "url": "/worlds/cedar-shadows-hana/",
+    "platform": "Android",
+    "genre": "Action-adventure",
+    "status": "Available on Google Play",
+    "publiclyReleased": true,
+    "art": "assets/hana-home-screen.webp",
+    "artType": "Title-screen artwork (CSS-framed from supplied game home screen)",
+    "privacyPolicy": "https://retrosoulgames.github.io/cedar-shadows-privacy/",
+    "chronicle": "/worlds/cedar-shadows-hana/chronicle/",
+    "homeScreen": "assets/hana-home-screen.webp",
+    "googlePlay": "https://play.google.com/store/apps/details?id=com.moonveil.forestembers",
+    "productionVersion": "4.14.30",
+    "versionCode": 56
+  }
+]

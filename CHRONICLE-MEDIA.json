@@ -1,0 +1,170 @@
+[
+  {
+    "file": "assets/chronicle/hero.webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 287488,
+    "sourceImageIndex": 0,
+    "sha256": "8fcd563d2b75ae019f4dd241a803e7acf30b91b6ac127ac627bb84123969f150"
+  },
+  {
+    "file": "assets/chronicle/two-homes.webp",
+    "width": 744,
+    "height": 357,
+    "bytes": 123276,
+    "sourceImageIndex": 1,
+    "sha256": "86e514f3cbde3e85f9c57b188015a91d52b3aa5e237537f8a8acc19ff6af0d73"
+  },
+  {
+    "file": "assets/chronicle/first-rescue.webp",
+    "width": 721,
+    "height": 382,
+    "bytes": 101668,
+    "sourceImageIndex": 2,
+    "sha256": "7ac73689e1518ea7a510d2bb4774f9c43af416eca73076e2a7df78a2700f52e4"
+  },
+  {
+    "file": "assets/chronicle/ren.webp",
+    "width": 335,
+    "height": 357,
+    "bytes": 44268,
+    "sourceImageIndex": 3,
+    "sha256": "8344141b880f8a3daa1b9d94ae487f33d83333421fd1ef36503b36e233bc9cb3"
+  },
+  {
+    "file": "assets/chronicle/hana.webp",
+    "width": 350,
+    "height": 312,
+    "bytes": 45862,
+    "sourceImageIndex": 4,
+    "sha256": "945adbbb3dcd942fc1846fa682f98e314e50040c0a5f8f698d7c458f16e84a30"
+  },
+  {
+    "file": "assets/chronicle/protector.webp",
+    "width": 325,
+    "height": 350,
+    "bytes": 47816,
+    "sourceImageIndex": 5,
+    "sha256": "93cacf4608f52dd298cffd8995004c3cc1b2b18b13d69d2d2fee0aa4796015d6"
+  },
+  {
+    "file": "assets/chronicle/sayo.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 430246,
+    "sourceImageIndex": 6,
+    "sha256": "913a8a77ce0db9be354503fd898ac84ec8cd67232975cd5b99d494bc53654fc0"
+  },
+  {
+    "file": "assets/chronicle/council.webp",
+    "width": 721,
+    "height": 334,
+    "bytes": 100824,
+    "sourceImageIndex": 7,
+    "sha256": "8ad168f1487784a0455327c2620871dec5af0124ee7dc8e26a3f40972e6b5a3e"
+  },
+  {
+    "file": "assets/chronicle/storm-ronin.webp",
+    "width": 407,
+    "height": 357,
+    "bytes": 64418,
+    "sourceImageIndex": 8,
+    "sha256": "fce810c25e4b5dcab9412bf1dd10be1551d417e62c24ddbdcecd871fef7c9951"
+  },
+  {
+    "file": "assets/chronicle/nightfall-shinobi.webp",
+    "width": 355,
+    "height": 355,
+    "bytes": 57084,
+    "sourceImageIndex": 9,
+    "sha256": "449b73b2ea5ce6970564a97bde65a886085daa299e96972ff4a9bff78c45cb30"
+  },
+  {
+    "file": "assets/chronicle/iron-commander.webp",
+    "width": 404,
+    "height": 365,
+    "bytes": 67912,
+    "sourceImageIndex": 10,
+    "sha256": "8982c6756ecf9a543c9b5a99a799777b864aa5d702647e483d594236920fadf8"
+  },
+  {
+    "file": "assets/chronicle/ivory-keeper.webp",
+    "width": 365,
+    "height": 365,
+    "bytes": 60504,
+    "sourceImageIndex": 11,
+    "sha256": "ed4c8d8041848c07cbd69f53ce88a3a1f74b6400665e83bac533b58219792666"
+  },
+  {
+    "file": "assets/chronicle/crimson-father.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 445960,
+    "sourceImageIndex": 12,
+    "sha256": "65600caa0484f2323155d4f55960b88073e9a24a19540db7e3a5916c248a3078"
+  },
+  {
+    "file": "assets/chronicle/vengeful-son.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 424530,
+    "sourceImageIndex": 13,
+    "sha256": "85d9a8b7b19f3ad45b71a2b425cc6a5c7df53d88fe553d7eef6de406184e1556"
+  },
+  {
+    "file": "assets/chronicle/black-ninja.webp",
+    "width": 310,
+    "height": 267,
+    "bytes": 87796,
+    "sourceImageIndex": 14,
+    "sha256": "7b90deb99b00873921a03a384bc1038e65034a048dbdbf33b3f174755f1a8dd2"
+  },
+  {
+    "file": "assets/chronicle/red-ninja.webp",
+    "width": 310,
+    "height": 271,
+    "bytes": 96110,
+    "sourceImageIndex": 15,
+    "sha256": "04d5cdb542c260f69643eb3255a97f7f1073f11ffc5cbb21a31b6e9f1bfe4042"
+  },
+  {
+    "file": "assets/chronicle/white-ninja.webp",
+    "width": 310,
+    "height": 267,
+    "bytes": 103970,
+    "sourceImageIndex": 16,
+    "sha256": "4f80373977cf7bca5005d171f3e4c20c60f80e472c578ad446df13f3cbecc1c8"
+  },
+  {
+    "file": "assets/chronicle/armored-samurai.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 347378,
+    "sourceImageIndex": 17,
+    "sha256": "05d480fa175847e6266e747a03bb93155c3af04621270a275563fd01016c1df5"
+  },
+  {
+    "file": "assets/chronicle/ivory-marksman.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 439704,
+    "sourceImageIndex": 18,
+    "sha256": "1f266aa161dab13f84251f5714703cf7fa17708f05afbef59b191bf400d9be88"
+  },
+  {
+    "file": "assets/chronicle/promise-kept.webp",
+    "width": 741,
+    "height": 370,
+    "bytes": 117774,
+    "sourceImageIndex": 19,
+    "sha256": "702ebaadac186d0d57031849ababf1ccbb3b7a6826fffe75ca1afe33b8360d74"
+  },
+  {
+    "file": "assets/chronicle/ember-remains.webp",
+    "width": 1280,
+    "height": 720,
+    "bytes": 370726,
+    "sourceImageIndex": 20,
+    "sha256": "5375c4314e3041fe958b9eccbdc9aec059408f10618a7769d0a679bac75c4a45"
+  }
+]
